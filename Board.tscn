@@ -8,6 +8,9 @@
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 53.8743 ]
+}
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -18,7 +21,56 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Position" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 263.028, 52.9429 )
-scale = Vector2( 10, 10 )
+position = Vector2( 260.137, 51.8173 )
+
+[node name="Position2" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 504.419, 52.8997 )
+
+[node name="Position3" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 757.846, 44.2752 )
+
+[node name="Position4" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 252.852, 298.401 )
+
+[node name="Position5" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 506.163, 297.587 )
+
+[node name="Position6" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 760.289, 295.143 )
+
+[node name="Position7" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 249.474, 555.966 )
+
+[node name="Position8" parent="." index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 507.589, 555.966 )
+
+[node name="Position9" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 760.289, 553.258 )
+
+[connection signal="player_moved" from="Position" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position2" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position3" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position4" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position5" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position6" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position7" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position8" to="." method="_on_Position_player_moved"]
+
+[connection signal="player_moved" from="Position9" to="." method="_on_Position_player_moved"]
 
 

@@ -7,10 +7,10 @@
 custom_solver_bias = 0.0
 radius = 8.69088
 
-[node name="Position" type="Area2D" index="0"]
+[node name="Position" type="Area2D"]
 
 position = Vector2( -8.20227, 0 )
-scale = Vector2( 20, 20 )
+scale = Vector2( 3, 3 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
