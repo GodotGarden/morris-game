@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Board.gd" type="Script" id=1]
 [ext_resource path="res://images/board.svg" type="Texture" id=2]
+[ext_resource path="res://Position.tscn" type="PackedScene" id=3]
 
-[node name="Board" type="Node2D"]
+[node name="Board" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -13,5 +15,10 @@ position = Vector2( 507.069, 297.949 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Position" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 263.028, 52.9429 )
+scale = Vector2( 10, 10 )
 
 
