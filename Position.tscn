@@ -1,14 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Position.gd" type="Script" id=1]
-[ext_resource path="res://images/black_piece.svg" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 8.69088
 
-[node name="Position" type="Area2D"]
+[node name="Position" type="Area2D" index="0"]
 
 position = Vector2( -8.20227, 0 )
 scale = Vector2( 20, 20 )
@@ -26,10 +25,9 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform" ]
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Piece" type="Sprite" parent="." index="1"]
 
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [connection signal="input_event" from="." to="." method="_on_Position_input_event"]
