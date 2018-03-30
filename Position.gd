@@ -18,12 +18,14 @@ func _on_Position_input_event(viewport, event, shape_idx):
 		# Check what player's turn it is
 		if board.player_turn == "black":
 			# Put a black piece on the position
+			occupied_by = "black"
 			$Piece.set_texture(black_piece_texture)
 			
 			# Tell the board the player moved
 			emit_signal("player_moved")
 		elif board.player_turn == "white":
 			# Put a white piece on the position
+			occupied_by = "white"
 			$Piece.set_texture(white_piece_texture)
 			
 			# Tell the board the player moved
