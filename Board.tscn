@@ -4,7 +4,7 @@
 [ext_resource path="res://images/board.svg" type="Texture" id=2]
 [ext_resource path="res://Position.tscn" type="PackedScene" id=3]
 
-[node name="Board" type="Node2D" index="0"]
+[node name="Board" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
