@@ -1,37 +1,37 @@
-extends Area2D
-
-var occupied_by
-
-# References to game elements
-var Board
-var Game
-
-# Piece textures
-var black_piece_texture = load("res://images/black_piece.svg")
-var white_piece_texture = load("res://images/white_piece.svg")
+extends Control
 
 signal player_moved
 
+var Game
+
+# Keep track of which color occupies this piece
+var occupied_by = null
+
+# Positions are 64 by 64, so the center is x32 y32
+const PIECE_CENTERING_OFFSET = Vector2(32, 32)
+
 func _ready():
-	# Get references to game elements
-	Board = self.get_parent()
-	Game = Board.get_parent()
+	Game = get_node("/root/Game")
 
-func _on_Position_input_event(viewport, event, shape_idx):
-	# Check if the event was a mouse click
-	if (event is InputEventMouseButton && event.pressed):
-		place_current_player_piece()
-
-func place_current_player_piece():
-	# Check what player's turn it is
-	if Game.player_turn == "black":
-		# Put a black piece on the position
-		occupied_by = "black"
-		$Piece.set_texture(black_piece_texture)
-	elif Game.player_turn == "white":
-		# Put a white piece on the position
-		occupied_by = "white"
-		$Piece.set_texture(white_piece_texture)
+func can_drop_data(position, piece):
+	var player_turn = Game.player_turn
 	
-	# Tell the board the player moved
-	emit_signal("player_moved")
+	# Make sure correct player is moving and position is not occupied
+	if player_turn == piece.color and occupied_by == null:
+		return true
+
+func drop_data(position, data):
+	# Put piece in center of position
+	data.rect_position = self.rect_global_position + PIECE_CENTERING_OFFSET
+
+func _on_Area2D_piece_entered(piece_color):
+	# Assuming a piece area entered
+	# position is occupied by a color
+	occupied_by = piece_color
+	print("position: player moved")
+	emit_signal("player_moved", piece_color)
+
+func _on_Area2D_area_exited(area):
+	# Assuming a piece area left
+	# position is no longer occupied by a color
+	occupied_by = null

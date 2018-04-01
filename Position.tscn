@@ -1,16 +1,44 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Position.gd" type="Script" id=1]
+[ext_resource path="res://images/position.svg" type="Texture" id=2]
+[ext_resource path="res://Area2D.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 8.69088
+extents = Vector2( 62.1064, 61.7746 )
 
-[node name="Position" type="Area2D"]
+[node name="Position" type="Control"]
 
-position = Vector2( -8.20227, 0 )
-scale = Vector2( 3, 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 128.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+position = Vector2( 64, 64 )
+scale = Vector2( 2, 2 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -18,20 +46,19 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-shape = SubResource( 1 )
-
-[node name="Piece" type="Sprite" parent="." index="1"]
-
-scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[connection signal="input_event" from="." to="." method="_on_Position_input_event"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
-[connection signal="mouse_entered" from="." to="." method="_on_Position_mouse_entered"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+
+[connection signal="piece_entered" from="Area2D" to="." method="_on_Area2D_piece_entered"]
 
 

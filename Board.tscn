@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Board.gd" type="Script" id=1]
-[ext_resource path="res://images/board.svg" type="Texture" id=2]
-[ext_resource path="res://Position.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Position.tscn" type="PackedScene" id=2]
 
 [node name="Board" type="Node2D"]
 
@@ -12,57 +11,55 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 53.8743 ]
 }
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Position" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 0.601441, -2.01242 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+[node name="Position2" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="Position" parent="." index="1" instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_right = 256.0
 
-position = Vector2( -246.331, -248.144 )
-scale = Vector2( 3, 3 )
+[node name="Position3" parent="." index="2" instance=ExtResource( 2 )]
 
-[node name="Position2" parent="." index="2" instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_right = 384.0
 
-position = Vector2( -2.04865, -247.062 )
-scale = Vector2( 3, 3 )
+[node name="Position4" parent="." index="3" instance=ExtResource( 2 )]
 
-[node name="Position3" parent="." index="3" instance=ExtResource( 3 )]
+margin_top = 128.0
+margin_bottom = 256.0
 
-position = Vector2( 251.378, -255.686 )
-scale = Vector2( 3, 3 )
+[node name="Position5" parent="." index="4" instance=ExtResource( 2 )]
 
-[node name="Position4" parent="." index="4" instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 256.0
 
-position = Vector2( -253.616, -1.56049 )
-scale = Vector2( 3, 3 )
+[node name="Position6" parent="." index="5" instance=ExtResource( 2 )]
 
-[node name="Position5" parent="." index="5" instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 384.0
+margin_bottom = 256.0
 
-position = Vector2( -0.304688, -2.37451 )
-scale = Vector2( 3, 3 )
+[node name="Position7" parent="." index="6" instance=ExtResource( 2 )]
 
-[node name="Position6" parent="." index="6" instance=ExtResource( 3 )]
+margin_top = 256.0
+margin_bottom = 384.0
 
-position = Vector2( 253.821, -4.81848 )
-scale = Vector2( 3, 3 )
+[node name="Position8" parent="." index="7" instance=ExtResource( 2 )]
 
-[node name="Position7" parent="." index="7" instance=ExtResource( 3 )]
+margin_left = 128.0
+margin_top = 256.0
+margin_right = 256.0
+margin_bottom = 384.0
 
-position = Vector2( -256.994, 256.004 )
-scale = Vector2( 3, 3 )
+[node name="Position9" parent="." index="8" instance=ExtResource( 2 )]
 
-[node name="Position8" parent="." index="8" instance=ExtResource( 3 )]
-
-position = Vector2( 1.12134, 256.004 )
-scale = Vector2( 3, 3 )
-
-[node name="Position9" parent="." index="9" instance=ExtResource( 3 )]
-
-position = Vector2( 253.821, 253.297 )
-scale = Vector2( 3, 3 )
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 384.0
+margin_bottom = 384.0
 
 [connection signal="player_moved" from="Position" to="." method="_on_Position_player_moved"]
 
