@@ -11,9 +11,11 @@ var occupied_by = null
 const PIECE_CENTERING_OFFSET = Vector2(32, 32)
 
 func _ready():
+	# Get reference to Game node, so we can access game state
 	Game = get_node("/root/Game")
 
 func can_drop_data(position, piece):
+	# Get current player turn
 	var player_turn = Game.player_turn
 	
 	# Make sure correct player is moving and position is not occupied
