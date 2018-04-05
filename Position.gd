@@ -30,8 +30,7 @@ func _on_Area2D_piece_entered(piece_color):
 	# Assuming a piece area entered
 	# position is occupied by a color
 	occupied_by = piece_color
-	print("position: player moved")
-	emit_signal("player_moved", piece_color)
+	emit_signal("player_moved", piece_color, self.name)
 
 func _on_Area2D_area_exited(area):
 	# Assuming a piece area left

@@ -17,7 +17,7 @@ func change_player_turn():
 	elif player_turn == "white":
 		player_turn = "black"
 
-func _on_Board_player_moved(player_color):
+func _on_Board_player_moved(player_color, position):
 	print("game: player moved")
 	# When a player moves, it is the other player's turn
 	change_player_turn()

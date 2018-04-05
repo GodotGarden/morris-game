@@ -14,7 +14,6 @@ const MAX_ALLOWED_PIECES = 3
 var white_pieces_on_board = 0
 var black_pieces_on_board = 0
 
-func _on_Position_player_moved(player_color):
-	print("board: player moved")
-	# Let listeners know the player moved
-	emit_signal("player_moved", player_color)
+func _on_Position_player_moved(player_color, position):
+	# Let listeners know the player moved to a position
+	emit_signal("player_moved", player_color, position)
