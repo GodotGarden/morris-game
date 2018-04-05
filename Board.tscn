@@ -11,14 +11,14 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 53.8743 ]
 }
 
-[node name="upper_left" parent="." index="0" instance=ExtResource( 2 )]
+[node name="top_left" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="upper_middle" parent="." index="1" instance=ExtResource( 2 )]
+[node name="top_middle" parent="." index="1" instance=ExtResource( 2 )]
 
 margin_left = 128.0
 margin_right = 256.0
 
-[node name="upper_right" parent="." index="2" instance=ExtResource( 2 )]
+[node name="top_right" parent="." index="2" instance=ExtResource( 2 )]
 
 margin_left = 256.0
 margin_right = 384.0
@@ -42,30 +42,30 @@ margin_top = 128.0
 margin_right = 384.0
 margin_bottom = 256.0
 
-[node name="lower_left" parent="." index="6" instance=ExtResource( 2 )]
+[node name="bottom_left" parent="." index="6" instance=ExtResource( 2 )]
 
 margin_top = 256.0
 margin_bottom = 384.0
 
-[node name="lower_middle" parent="." index="7" instance=ExtResource( 2 )]
+[node name="bottom_middle" parent="." index="7" instance=ExtResource( 2 )]
 
 margin_left = 128.0
 margin_top = 256.0
 margin_right = 256.0
 margin_bottom = 384.0
 
-[node name="lower_right" parent="." index="8" instance=ExtResource( 2 )]
+[node name="bottom_right" parent="." index="8" instance=ExtResource( 2 )]
 
 margin_left = 256.0
 margin_top = 256.0
 margin_right = 384.0
 margin_bottom = 384.0
 
-[connection signal="player_moved" from="upper_left" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="top_left" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="upper_middle" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="top_middle" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="upper_right" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="top_right" to="." method="_on_Position_player_moved"]
 
 [connection signal="player_moved" from="center_left" to="." method="_on_Position_player_moved"]
 
@@ -73,10 +73,10 @@ margin_bottom = 384.0
 
 [connection signal="player_moved" from="center_right" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="lower_left" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="bottom_left" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="lower_middle" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="bottom_middle" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="lower_right" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="bottom_right" to="." method="_on_Position_player_moved"]
 
 
