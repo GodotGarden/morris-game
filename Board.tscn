@@ -11,72 +11,72 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 53.8743 ]
 }
 
-[node name="Position" parent="." index="0" instance=ExtResource( 2 )]
+[node name="upper_left" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Position2" parent="." index="1" instance=ExtResource( 2 )]
+[node name="upper_middle" parent="." index="1" instance=ExtResource( 2 )]
 
 margin_left = 128.0
 margin_right = 256.0
 
-[node name="Position3" parent="." index="2" instance=ExtResource( 2 )]
+[node name="upper_right" parent="." index="2" instance=ExtResource( 2 )]
 
 margin_left = 256.0
 margin_right = 384.0
 
-[node name="Position4" parent="." index="3" instance=ExtResource( 2 )]
+[node name="center_left" parent="." index="3" instance=ExtResource( 2 )]
 
 margin_top = 128.0
 margin_bottom = 256.0
 
-[node name="Position5" parent="." index="4" instance=ExtResource( 2 )]
+[node name="center_middle" parent="." index="4" instance=ExtResource( 2 )]
 
 margin_left = 128.0
 margin_top = 128.0
 margin_right = 256.0
 margin_bottom = 256.0
 
-[node name="Position6" parent="." index="5" instance=ExtResource( 2 )]
+[node name="center_right" parent="." index="5" instance=ExtResource( 2 )]
 
 margin_left = 256.0
 margin_top = 128.0
 margin_right = 384.0
 margin_bottom = 256.0
 
-[node name="Position7" parent="." index="6" instance=ExtResource( 2 )]
+[node name="lower_left" parent="." index="6" instance=ExtResource( 2 )]
 
 margin_top = 256.0
 margin_bottom = 384.0
 
-[node name="Position8" parent="." index="7" instance=ExtResource( 2 )]
+[node name="lower_middle" parent="." index="7" instance=ExtResource( 2 )]
 
 margin_left = 128.0
 margin_top = 256.0
 margin_right = 256.0
 margin_bottom = 384.0
 
-[node name="Position9" parent="." index="8" instance=ExtResource( 2 )]
+[node name="lower_right" parent="." index="8" instance=ExtResource( 2 )]
 
 margin_left = 256.0
 margin_top = 256.0
 margin_right = 384.0
 margin_bottom = 384.0
 
-[connection signal="player_moved" from="Position" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="upper_left" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position2" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="upper_middle" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position3" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="upper_right" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position4" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="center_left" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position5" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="center_middle" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position6" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="center_right" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position7" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="lower_left" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position8" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="lower_middle" to="." method="_on_Position_player_moved"]
 
-[connection signal="player_moved" from="Position9" to="." method="_on_Position_player_moved"]
+[connection signal="player_moved" from="lower_right" to="." method="_on_Position_player_moved"]
 
 
