@@ -18,6 +18,7 @@ margin_left = 200.0
 margin_top = 128.0
 margin_right = 264.0
 margin_bottom = 192.0
+_sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="BlackPiece2" parent="." index="2" instance=ExtResource( 3 )]
 

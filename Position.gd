@@ -22,9 +22,9 @@ func can_drop_data(position, piece):
 	if player_turn == piece.color and occupied_by == null:
 		return true
 
-func drop_data(position, data):
+func drop_data(position, piece):
 	# Put piece in center of position
-	data.rect_position = self.rect_global_position + PIECE_CENTERING_OFFSET
+	piece.rect_position = self.rect_global_position + PIECE_CENTERING_OFFSET
 
 func _on_Area2D_piece_entered(piece_color):
 	# Assuming a piece area entered
